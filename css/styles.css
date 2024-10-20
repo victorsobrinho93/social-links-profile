@@ -1,0 +1,104 @@
+:root {
+  --green: hsl(75, 94%, 57%);
+  --grey-700: hsl(0, 0%, 20%);
+  --grey-800: hsl(0, 0%, 12%);
+  --grey-900: hsl(0, 0%, 8%);
+  --button-rest: #333333;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+}
+
+body {
+  background-color: var(--grey-900);
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
+}
+
+@media (orientation: landscape) {
+  .container {
+    grid-template-columns: 37.5% 25% 37.5%;
+  }
+}
+
+@media (orientation: portrait) {
+  .container {
+    grid-template-columns: 5% auto 5%;
+  }
+}
+
+/* .user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+} */
+
+.avatar {
+  border-radius: 360px;
+  width: 6rem;
+  margin: 1.5rem 0;
+}
+
+.profile-card {
+  line-height: 1.5;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--grey-800);
+  align-items: center;
+  text-align: center;
+  grid-column: 2;
+  grid-row: 2;
+  border-radius: 15px;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.location-tag {
+  color: var(--green);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background-color: var(--button-rest);
+  padding: 20px;
+  width: 100%;
+  align-self: center;
+  border-radius: 1rem;
+}
+
+.btn:hover {
+  background-color: var(--green);
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.short-bio {
+  margin: 1rem 0;
+}
